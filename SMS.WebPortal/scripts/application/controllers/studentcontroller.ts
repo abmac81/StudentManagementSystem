@@ -1,18 +1,21 @@
-﻿module controllers.sms {
+﻿module controllers {
     'use strict';
 
-    export interface IStudentScope extends IBaseScope {
-
+    export interface IStudentScope extends IBaseScope
+    {
+        name: string;
+        lastname: string;
     }
 
-    export class ActivityEntryController extends BaseController {
+    export class StudentController extends BaseController{
+        static $inject = ['$scope'];
 
-        static $inject = ['$scope', 'JKCSService', '$attrs'];
-
-        constructor(private $scope: IStudentScope,
-            private JKCSService: services.sms.JKCSService) {
-
+        constructor($scope: IStudentScope) {
             super();
+
+            $scope.name = "Ameen";
+            $scope.lastname = "Abdeen";
+            console.log('Hi');
         }
     }
 }

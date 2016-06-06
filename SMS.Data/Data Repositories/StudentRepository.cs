@@ -6,6 +6,7 @@ using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Core.Common.Contracts;
 
 namespace SMS.Data.Data_Repositories
 {

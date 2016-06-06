@@ -5,20 +5,18 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var controllers;
 (function (controllers) {
-    var sms;
-    (function (sms) {
-        'use strict';
-        var ActivityEntryController = (function (_super) {
-            __extends(ActivityEntryController, _super);
-            function ActivityEntryController($scope, JKCSService) {
-                _super.call(this);
-                this.$scope = $scope;
-                this.JKCSService = JKCSService;
-            }
-            ActivityEntryController.$inject = ['$scope', 'JKCSService', '$attrs'];
-            return ActivityEntryController;
-        }(controllers.BaseController));
-        sms.ActivityEntryController = ActivityEntryController;
-    })(sms = controllers.sms || (controllers.sms = {}));
+    'use strict';
+    var StudentController = (function (_super) {
+        __extends(StudentController, _super);
+        function StudentController($scope) {
+            _super.call(this);
+            $scope.name = "Ameen";
+            $scope.lastname = "Abdeen";
+            console.log('Hi');
+        }
+        StudentController.$inject = ['$scope'];
+        return StudentController;
+    }(controllers.BaseController));
+    controllers.StudentController = StudentController;
 })(controllers || (controllers = {}));
 //# sourceMappingURL=studentcontroller.js.map

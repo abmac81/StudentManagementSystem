@@ -1,17 +1,15 @@
 ﻿using Core.Common.Contracts;
+using SMS.Business.Contracts;
 using SMS.Business.Entities;
 using SMS.Data.Contracts.Repository_Interface;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using System.Linq;
-using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.Text;
 
 namespace SMS.Business.Managers
 {
-    public class StudentManager : ManagerBase, IStudentManager
+    public class StudentManager : ManagerBase, IStudentService
     {
         [Import]
         private IDataRepositoryFactory _DataRepositoryFactory;

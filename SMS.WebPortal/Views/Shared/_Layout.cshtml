@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/main.css" rel="stylesheet" />
+
+    <script src="~/scripts/jquery-2.2.3.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <script src="~/scripts/angular.min.js"></script>
@@ -18,8 +22,14 @@
 
     <script src="~/scripts/application/controllers/BaseController.js"></script>
     <script src="~/scripts/application/controllers/studentcontroller.js"></script>
+
+    <script src="~/scripts/handlers/StudentWebClientHandler.js"></script>
+
+    <script type="text/javascript">
+        var app = new StudentWebClient.StudentWebClientHandler();
+    </script>
 </head>
-<body>
+<body ng-app="StudentApp" >
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -44,8 +54,5 @@
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
-
-    <script src="~/scripts/jquery-2.2.3.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
 </html>

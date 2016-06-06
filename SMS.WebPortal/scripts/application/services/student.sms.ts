@@ -1,4 +1,4 @@
-﻿module services.sms {
+﻿module services {
 
     //#region UpdateStudent
 

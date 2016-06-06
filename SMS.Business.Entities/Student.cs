@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace SMS.Business.Entities
 {
     [DataContract]
-    public class Student : ObjectBase
+    public class Student
     {
         [DataMember]
         public int StudentID { get; set; }

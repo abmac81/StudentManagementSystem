@@ -7,11 +7,11 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
-namespace SMS.Business.Managers
+namespace SMS.Business.Contracts
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IStudentManager" in both code and config file together.
     [ServiceContract]
-    public interface IStudentManager
+    public interface IStudentService
     {
         [OperationContract]
         [WebInvoke(Method = "GET",
@@ -23,7 +23,7 @@ namespace SMS.Business.Managers
         [OperationContract]
         [WebGet(RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json,
-            UriTemplate = "/GetStudentDetails/{StudentId}")]
+            UriTemplate = "/GetStudentDetails/{studentId}")]
         Student GetStudentDetails(string studentId);
 
         [OperationContract]
@@ -37,7 +37,7 @@ namespace SMS.Business.Managers
         [WebInvoke(Method = "DELETE",
             RequestFormat = WebMessageFormat.Json,
             ResponseFormat = WebMessageFormat.Json,
-            UriTemplate = "DeleteStudent/{StudentId}")]
+            UriTemplate = "DeleteStudent/{studentId}")]
         void DeleteStudent(string studentId);
     }
 }
